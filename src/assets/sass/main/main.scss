@@ -1,9 +1,19 @@
-@import '../colors';
 
 .main{
-  background: $background_color;
+  background: $very-dark-blue;
   margin: 0;
   padding: 0;
-  height: 1000px;
+  height: 100%;
   width: 100%;
+
+  &_back{
+    &_top{
+      height: 200px !important;
+
+      @media only screen and (max-device-width: 480px) {
+        height: 50px !important;
+      }
+    }
+  }
 }
+

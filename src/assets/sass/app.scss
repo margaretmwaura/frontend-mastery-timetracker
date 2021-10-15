@@ -1,7 +1,12 @@
-@import 'main/main';
 
-body{
+@import 'colors';
+@import 'main/main';
+@import "profile/profile";
+@import "../../../foundation/css/app.css";
+@import "../../../foundation/css/foundation.css";
+
+html, body{
   margin: 0;
-  height: 800px;
+  height: 100%;
   width: 100%;
 }

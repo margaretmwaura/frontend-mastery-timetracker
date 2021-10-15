@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'rubik';
+  src: url('../../fonts/Rubik/Rubik-VariableFont_wght.ttf') format("truetype");
+}
+.profile {
+  height: 500px;
+  background: $dark-blue;
+  border-radius: 15px;
+
+  &_details {
+    background: $background-color !important;
+    border-radius: 15px !important;
+    height: 350px !important;
+    padding: 30px;
+
+    img {
+      height: 70px;
+      width: 70px;
+      //While giving this path dont start from the current directory that is a single dot
+      background: url("../../images/image-jeremy.png");
+      background-size: cover;
+      //Without this the image has a border
+      border-radius: 50%;
+    }
+
+    p{
+      margin-top: 40px;
+      color: white;
+      font-weight: 500;
+      font-family: rubik, monospace;
+    }
+
+    span{
+      font-size: 40px;
+      line-height: 1.2em;
+    }
+  }
+}

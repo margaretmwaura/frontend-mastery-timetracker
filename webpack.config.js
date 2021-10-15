@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-
 module.exports = {
     mode: 'development',
     entry: {
@@ -35,7 +34,6 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./index.html",
-
         }),
         new Dotenv()
     ],
@@ -62,10 +60,12 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
-
                         options: {
                             sourceMap: true
                         }
+                    },
+                    {
+                        loader: "resolve-url-loader"
                     },
                     {
                         loader: 'sass-loader',
@@ -75,25 +75,43 @@ module.exports = {
                     }
                 ]
             },
+            //The resolve url loader is important otherwise the images will not load
             {
                 test: /\.(png|svg|jpg|gif|webp|jpeg)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: `[name].[ext]`,
-                        // Output into parent folder's directory
-                        outputPath: "./img",
-                    }
-                }
+                use: [
+                    //This is making the loading of images using css impossible
+                    // {
+                    //     loader: 'url-loader',
+                    // },
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: `[name].[ext]`,
+                            // Output into parent folder's directory
+                            outputPath: "./img",
+                        }
+                    }]
             },
+            //This is for loading of the various fonts
+            {
+                test: /\.(ttf|otf|eot|woff|woff2)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "fonts/[name].[ext]",
+                        },
+                    },
+                ],
+            }
 
         ]
 
     },
 
     devServer: {
-        port : 4000,
-        hot : true,
+        port: 4000,
+        hot: true,
         historyApiFallback: true
     },
     optimization: {
@@ -113,7 +131,7 @@ module.exports = {
             name: true
         }
     },
-    node: { fs: 'empty' },
+    node: {fs: 'empty'},
     externals: {
         jQuery: 'jQuery',
     },
