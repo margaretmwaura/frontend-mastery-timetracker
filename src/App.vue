@@ -42,7 +42,7 @@
 
 <script>
 
-import styles from './assets/sass/_export.scss';
+import styles from './assets/sass/_export.module.scss';
 import Profile from "./components/Profile";
 import Card from "./components/card";
 
@@ -55,6 +55,12 @@ export default {
   data(){
     return{
       color_one : 'hsl(15, 100%, 70%)',
+    }
+  },
+  computed: {
+    variable() {
+      console.log(styles); // Object {}
+      return styles || "not found";
     }
   },
   created() {

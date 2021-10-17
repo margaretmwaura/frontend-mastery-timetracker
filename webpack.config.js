@@ -24,23 +24,23 @@ module.exports = {
         },
         extensions: ['*', '.js', '.vue', '.json']
     },
-    plugins: [
-        new webpack.ProgressPlugin(),
-        new VueLoaderPlugin(),
-        new workboxPlugin.GenerateSW({
-            swDest: 'sw.js',
-            clientsClaim: true,
-            skipWaiting: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./index.html",
-            filename: './index.html'
-        }),
-        new Dotenv()
-    ],
-
     module: {
         rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    "vue-style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            // enable CSS Modules
+                            modules: true,
+                            // customize generated class names
+                            localIdentName: "[local]_[hash:base64:8]"
+                        }
+                    }
+                ]
+            },
             {
                 test: /.(js|jsx)$/,
                 include: [],
@@ -106,9 +106,21 @@ module.exports = {
                 ],
             },
         ]
-
     },
-
+    plugins: [
+        new webpack.ProgressPlugin(),
+        new VueLoaderPlugin(),
+        new workboxPlugin.GenerateSW({
+            swDest: 'sw.js',
+            clientsClaim: true,
+            skipWaiting: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "./index.html",
+            filename: './index.html'
+        }),
+        new Dotenv()
+    ],
     devServer: {
         port: 4000,
         hot: true,
