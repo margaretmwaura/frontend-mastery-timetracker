@@ -34,6 +34,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./index.html",
+            filename: './index.html'
         }),
         new Dotenv()
     ],
@@ -103,8 +104,7 @@ module.exports = {
                         },
                     },
                 ],
-            }
-
+            },
         ]
 
     },

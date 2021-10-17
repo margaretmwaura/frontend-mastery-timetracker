@@ -356,7 +356,7 @@ textarea {
   width: 91.66667%; }
 
 .grid-x > .small-12 {
-  width: 100%; }
+  width: 100% }
 
 @media print, screen and (min-width: 40em) {
   .grid-x > .medium-auto {

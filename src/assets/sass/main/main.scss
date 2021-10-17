@@ -1,4 +1,3 @@
-
 .main{
   background: $very-dark-blue;
   margin: 0;
@@ -11,7 +10,8 @@
       height: 200px !important;
 
       @media only screen and (max-device-width: 480px) {
-        height: 50px !important;
+        //height: 50px !important;
+        //width: 100%;
       }
     }
   }

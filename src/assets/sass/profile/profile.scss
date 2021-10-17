@@ -3,7 +3,7 @@
   src: url('../../fonts/Rubik/Rubik-VariableFont_wght.ttf') format("truetype");
 }
 .profile {
-  height: 500px;
+  height: 520px;
   background: $dark-blue;
   border-radius: 15px;
 
@@ -21,18 +21,37 @@
       background-size: cover;
       //Without this the image has a border
       border-radius: 50%;
+      border: 3px solid white;
     }
 
-    p{
+    p {
       margin-top: 40px;
       color: white;
       font-weight: 500;
       font-family: rubik, monospace;
     }
 
-    span{
+    span {
       font-size: 40px;
       line-height: 1.2em;
+    }
+  }
+
+  &_schedule {
+    font-size: 16px;
+    padding: 30px;
+    font-weight: 500;
+
+    &_first {
+      color: $desaturated-blue;
+    }
+
+    &_second {
+      color: white;
+    }
+
+    &_third {
+      color: $desaturated-blue;
     }
   }
 }

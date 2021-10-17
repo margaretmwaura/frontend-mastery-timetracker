@@ -1,20 +1,22 @@
 <template>
   <div class="profile">
     <div class="grid-y">
-      <div class="cell medium-8 large-8 small-8 profile_details">
-<!--        <img src="./img/image-jeremy.png" alt="...">-->
-        <img />
+      <div class="cell small-12 medium-8 large-8  profile_details">
+        <!--        <img src="./img/image-jeremy.png" alt="...">-->
+        <img/>
         <p>Report for
           <br>
-        <span>
+          <span>
           Jeremy
           <br>
           Robson
         </span>
         </p>
       </div>
-      <div class="cell medium-4 large-4 small-4">
-
+      <div class="cell small-12 medium-4 large-4 profile_schedule">
+        <p class="profile_schedule_first">Daily</p>
+        <p class="profile_schedule_second">Weekly</p>
+        <p class="profile_schedule_third">Monthly</p>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@ export default {
       // name : 'image-jeremy.png'
     }
   },
-  methods:{
+  methods: {
     loadImg: function (path) {
       require(path)
     }
