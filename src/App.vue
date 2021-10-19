@@ -54,7 +54,7 @@ export default {
   },
   data(){
     return{
-      color_one : 'hsl(15, 100%, 70%)',
+      color_one : styles.blue,
     }
   },
   computed: {
@@ -63,14 +63,6 @@ export default {
       return styles || "not found";
     }
   },
-  created() {
-    console.log("We here baby")
-    console.log(JSON.stringify(styles))
-  },
-  mounted() {
-    console.log("We here baby")
-    console.log(JSON.stringify(styles))
-  }
 }
 </script>
 

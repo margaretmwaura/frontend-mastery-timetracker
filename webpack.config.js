@@ -27,21 +27,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [
-                    "vue-style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            // enable CSS Modules
-                            modules: true,
-                            // customize generated class names
-                            localIdentName: "[local]_[hash:base64:8]"
-                        }
-                    }
-                ]
-            },
-            {
                 test: /.(js|jsx)$/,
                 include: [],
                 loader: 'babel-loader'
@@ -50,15 +35,17 @@ module.exports = {
                 test: /.vue$/,
                 loader: 'vue-loader'
             },
+            //The resolve url loader is important otherwise the images will not load
+            // The vue-style-loader is causing importing of scss variables from export to be empty objects
             {
                 test: /\.(s*)css$/,
                 use: [
                     {
                         loader: 'style-loader'
                     },
-                    {
-                        loader: 'vue-style-loader'
-                    },
+                    // {
+                    //     loader: 'vue-style-loader'
+                    // },
                     {
                         loader: 'css-loader',
                         options: {
@@ -76,7 +63,6 @@ module.exports = {
                     }
                 ]
             },
-            //The resolve url loader is important otherwise the images will not load
             {
                 test: /\.(png|svg|jpg|gif|webp|jpeg)$/,
                 use: [
@@ -122,7 +108,7 @@ module.exports = {
         new Dotenv()
     ],
     devServer: {
-        port: 4000,
+        port: 5000,
         hot: true,
         historyApiFallback: true
     },
