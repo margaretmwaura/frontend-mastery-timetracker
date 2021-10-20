@@ -15,18 +15,24 @@
               <div class="cell small-12 medium-3 large-3">
                 <div class="grid-y grid-margin-y">
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="color_one"></card>
+                    <card :background_color="red" :type="'Work'">
+                      <template v-slot:hours>
+                        <p>32hrs</p>
+                      </template>
+                    </card>
                   </div>
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="color_one"></card>
+                    <card :background_color="green" :type="'Exercise'">
+                      <template v-slot:hours>
+                        <p>4hrs</p>
+                      </template>
+                    </card>
                   </div>
                 </div>
               </div>
               <div class="cell small-12 medium-3 large-3">
-                <profile></profile>
               </div>
               <div class="cell small-12 medium-3 large-3">
-                <profile></profile>
               </div>
             </div>
           </div>
@@ -54,7 +60,8 @@ export default {
   },
   data(){
     return{
-      color_one : styles.blue,
+      red : styles.red,
+      green : styles.green
     }
   },
   computed: {

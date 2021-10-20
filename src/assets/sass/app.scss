@@ -5,6 +5,12 @@
 @import "../../../foundation/css/app.css";
 @import "../../../foundation/css/foundation.css";
 
+@font-face {
+  font-family: 'rubik';
+  src: url('../fonts/Rubik/Rubik-VariableFont_wght.ttf') format("truetype");
+  font-weight: 300;
+}
+
 html, body{
   margin: 0;
   height: 100%;

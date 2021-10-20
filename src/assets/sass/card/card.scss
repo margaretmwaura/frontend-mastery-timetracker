@@ -1,4 +1,47 @@
 .card{
   height: 240px;
   border-radius: 15px;
+  border-width: 0px;
+
+  &_top{
+    height: 35px !important;
+  }
+
+  &_bottom{
+     background: $dark-blue;
+     height: 205px !important;
+     border-radius: 15px !important;
+     padding: 20px;
+
+    &_type{
+      position:relative;
+      &_title{
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+      }
+      &_images{
+        position:absolute;
+        bottom: 0;
+        right:0;
+        img{
+          background: url("../../images/icon-ellipsis.svg");
+          background-size: cover;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          margin-left: 2px;
+        }
+      }
+    }
+
+    &_hours{
+      p{
+        font-size: 45px;
+        color: white;
+        font-family: rubik, monospace;
+        font-weight: 300 !important;
+      }
+    }
+  }
 }

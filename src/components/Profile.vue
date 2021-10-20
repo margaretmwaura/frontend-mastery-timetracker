@@ -2,7 +2,8 @@
   <div class="profile">
     <div class="grid-y">
       <div class="cell small-12 medium-8 large-8  profile_details">
-        <!--        <img src="./img/image-jeremy.png" alt="...">-->
+<!--                <img src="./img/image-jeremy.png" alt="...">-->
+<!--        <img :src="logo"/>-->
         <img/>
         <p>Report for
           <br>
@@ -28,7 +29,7 @@ export default {
   name: "Profile",
   data() {
     return {
-      // logo: require('../../public/images/image-jeremy.png'),
+      logo: require('../assets/images/image-jeremy.png'),
       // name : 'image-jeremy.png'
     }
   },
