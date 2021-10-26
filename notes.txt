@@ -1,2 +1,0 @@
-1) The build command does not include the -- watch tag because with it the building of the image never completes
-2) The --host 0.0.0.0 is needed beside the start command otherwise it will not work in browser
