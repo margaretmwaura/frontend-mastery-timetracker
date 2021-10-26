@@ -12,6 +12,7 @@
      height: 205px !important;
      border-radius: 15px !important;
      padding: 20px;
+     border: 10px solid $dark-blue;
 
     &_type{
       position:relative;
@@ -25,7 +26,7 @@
         bottom: 0;
         right:0;
         img{
-          background: url("../../images/icon-ellipsis.svg");
+          background: url("./../../../../public/images/icon-ellipsis.svg");
           background-size: cover;
           height: 5px;
           width: 5px;
@@ -36,11 +37,19 @@
     }
 
     &_hours{
+      //line-height: 10% !important;
       p{
         font-size: 45px;
         color: white;
         font-family: rubik, monospace;
         font-weight: 300 !important;
+      }
+      h1{
+        margin-top: -8%;
+        font-size: 16px;
+        color: $desaturated-blue;
+        font-family: rubik, monospace;
+        font-weight: 700 !important;
       }
     }
   }

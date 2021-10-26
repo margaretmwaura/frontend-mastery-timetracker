@@ -3,8 +3,11 @@
     <div class="grid-y">
       <div class="cell small-12 medium-8 large-8  profile_details">
 <!--                <img src="./img/image-jeremy.png" alt="...">-->
-<!--        <img :src="logo"/>-->
-        <img/>
+<!--        <img :src="require('../assets/images/image-jeremy.png')"/>-->
+<!--        <img src="./public/images/image-jeremy.png"/>-->
+<!--        <img :src="require(`../assets/${name}`)" >-->
+<!--        <img :src="`${publicPath}image-jeremy.png.png`">-->
+        <img :src="`./public/images/${name}`">
         <p>Report for
           <br>
           <span>
@@ -29,14 +32,13 @@ export default {
   name: "Profile",
   data() {
     return {
-      logo: require('../assets/images/image-jeremy.png'),
-      // name : 'image-jeremy.png'
+      name : 'image-jeremy.png',
     }
   },
   methods: {
     loadImg: function (path) {
       require(path)
-    }
+    },
   }
 }
 </script>

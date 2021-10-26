@@ -18,6 +18,7 @@
                     <card :background_color="red" :type="'Work'">
                       <template v-slot:hours>
                         <p>32hrs</p>
+                        <h1>Last week - 36 hrs</h1>
                       </template>
                     </card>
                   </div>
@@ -25,14 +26,51 @@
                     <card :background_color="green" :type="'Exercise'">
                       <template v-slot:hours>
                         <p>4hrs</p>
+                        <h1>Last week - 5 hrs</h1>
                       </template>
                     </card>
                   </div>
                 </div>
               </div>
               <div class="cell small-12 medium-3 large-3">
+                <div class="grid-y grid-margin-y">
+                  <div class="cell medium-6 small-12 large-6">
+                    <card :background_color="blue" :type="'Play'">
+                      <template v-slot:hours>
+                        <p>10hrs</p>
+                        <h1>Last week - 8hrs</h1>
+                      </template>
+                    </card>
+                  </div>
+                  <div class="cell medium-6 small-12 large-6">
+                    <card :background_color="violet" :type="'Social'">
+                      <template v-slot:hours>
+                        <p>5hrs</p>
+                        <h1>Last week - 10hrs</h1>
+                      </template>
+                    </card>
+                  </div>
+                </div>
               </div>
               <div class="cell small-12 medium-3 large-3">
+                <div class="grid-y grid-margin-y">
+                  <div class="cell medium-6 small-12 large-6">
+                    <card :background_color="light_red_study" :type="'Study'">
+                      <template v-slot:hours>
+                        <p>4hrs</p>
+                        <h1>Last week - 7hrs</h1>
+                      </template>
+                    </card>
+                  </div>
+                  <div class="cell medium-6 small-12 large-6">
+                    <card :background_color="soft_orange" :type="'Self Care'">
+                      <template v-slot:hours>
+                        <p>2hrs</p>
+                        <h1>Last week - 2hrs</h1>
+                      </template>
+                    </card>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -58,10 +96,14 @@ export default {
     Card,
     Profile
   },
-  data(){
-    return{
-      red : styles.red,
-      green : styles.green
+  data() {
+    return {
+      red: styles.red,
+      green: styles.green,
+      blue: styles.blue,
+      violet: styles.violet,
+      light_red_study: styles.light_red_study,
+      soft_orange: styles.soft_orange,
     }
   },
   computed: {
