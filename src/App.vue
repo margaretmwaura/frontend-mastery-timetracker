@@ -15,7 +15,7 @@
               <div class="cell small-12 medium-3 large-3">
                 <div class="grid-y grid-margin-y">
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="red" :type="'Work'">
+                    <card :background_color="red" :type="'Work'" :image="'icon-work.svg'">
                       <template v-slot:hours>
                         <p>32hrs</p>
                         <h1>Last week - 36 hrs</h1>
@@ -23,7 +23,7 @@
                     </card>
                   </div>
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="green" :type="'Exercise'">
+                    <card :background_color="green" :type="'Exercise'" :image="'icon-exercise.svg'">
                       <template v-slot:hours>
                         <p>4hrs</p>
                         <h1>Last week - 5 hrs</h1>
@@ -35,7 +35,7 @@
               <div class="cell small-12 medium-3 large-3">
                 <div class="grid-y grid-margin-y">
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="blue" :type="'Play'">
+                    <card :background_color="blue" :type="'Play'" :image="'icon-play.svg'">
                       <template v-slot:hours>
                         <p>10hrs</p>
                         <h1>Last week - 8hrs</h1>
@@ -43,7 +43,7 @@
                     </card>
                   </div>
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="violet" :type="'Social'">
+                    <card :background_color="violet" :type="'Social'" :image="'icon-social.svg'">
                       <template v-slot:hours>
                         <p>5hrs</p>
                         <h1>Last week - 10hrs</h1>
@@ -55,7 +55,7 @@
               <div class="cell small-12 medium-3 large-3">
                 <div class="grid-y grid-margin-y">
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="light_red_study" :type="'Study'">
+                    <card :background_color="light_red_study" :type="'Study'" :image="'icon-study.svg'">
                       <template v-slot:hours>
                         <p>4hrs</p>
                         <h1>Last week - 7hrs</h1>
@@ -63,7 +63,7 @@
                     </card>
                   </div>
                   <div class="cell medium-6 small-12 large-6">
-                    <card :background_color="soft_orange" :type="'Self Care'">
+                    <card :background_color="soft_orange" :type="'Self Care'" :image="'icon-self-care.svg'">
                       <template v-slot:hours>
                         <p>2hrs</p>
                         <h1>Last week - 2hrs</h1>

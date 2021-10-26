@@ -5,6 +5,13 @@
 
   &_top{
     height: 35px !important;
+    padding-right: 20px;
+    img{
+      height: 50px;
+      width: 50px;
+      background-size: cover;
+      float: right;
+    }
   }
 
   &_bottom{
