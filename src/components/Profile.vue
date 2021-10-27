@@ -7,7 +7,8 @@
 <!--        <img src="./public/images/image-jeremy.png"/>-->
 <!--        <img :src="require(`../assets/${name}`)" >-->
 <!--        <img :src="`${publicPath}image-jeremy.png.png`">-->
-        <img :src="`./public/images/${name}`">
+<!--        <img :src="`./src/assets/images/${name}`">-->
+        <img src="http://s3.amazonaws.com/timetrackerassets/image-jeremy.png"/>
         <p>Report for
           <br>
           <span>
