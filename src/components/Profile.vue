@@ -2,16 +2,8 @@
   <div class="profile">
     <div class="grid-y">
       <div class="cell small-12 medium-8 large-8  profile_details">
-<!--        The various ways to load an image dynamically -->
-
-<!--         <img src="./img/image-jeremy.png" alt="...">-->
-<!--        <img :src="require('../assets/images/image-jeremy.png')"/>-->
-<!--        <img src="./public/images/image-jeremy.png"/>-->
-<!--        <img :src="require(`../assets/${name}`)" >-->
-<!--        <img :src="`${publicPath}image-jeremy.png.png`">-->
-
-<!--         Only this works-->
-<!--        <img :src="`./src/assets/images/${name}`">-->
+<!--        For images check the object url image at the s3 bucket so as to get the right one -->
+<!--        We are not using the images in the images folder due to the deployment in heroku-->
         <img :src="`https://timetrackerassets.s3.us-east-2.amazonaws.com/${name}`"/>
         <p>Report for
           <br>

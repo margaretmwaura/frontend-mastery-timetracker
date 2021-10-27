@@ -1,3 +1,15 @@
 1) The build command does not include the -- watch tag because with it the building of the image never completes
 2) The --host 0.0.0.0 is needed beside the start command otherwise it will not work in browser
 3) The only deployment to heroku that seems to work is to use git push heroku main after pushing to git instead of allowing for automatic deployments
+4) On displaying of images dynamically
+
+<!--        The various ways to load an image dynamically -->
+
+<!--         <img src="./img/image-jeremy.png" alt="...">-->
+<!--        <img :src="require('../assets/images/image-jeremy.png')"/>-->
+<!--        <img src="./public/images/image-jeremy.png"/>-->
+<!--        <img :src="require(`../assets/${name}`)" >-->
+<!--        <img :src="`${publicPath}image-jeremy.png.png`">-->
+
+<!--         Only this works-->
+<!--        <img :src="`./src/assets/images/${name}`">-->
