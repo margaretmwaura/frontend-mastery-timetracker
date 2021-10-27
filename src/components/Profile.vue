@@ -2,14 +2,17 @@
   <div class="profile">
     <div class="grid-y">
       <div class="cell small-12 medium-8 large-8  profile_details">
+<!--        The various ways to load an image dynamically -->
+
 <!--         <img src="./img/image-jeremy.png" alt="...">-->
 <!--        <img :src="require('../assets/images/image-jeremy.png')"/>-->
 <!--        <img src="./public/images/image-jeremy.png"/>-->
 <!--        <img :src="require(`../assets/${name}`)" >-->
 <!--        <img :src="`${publicPath}image-jeremy.png.png`">-->
+
+<!--         Only this works-->
 <!--        <img :src="`./src/assets/images/${name}`">-->
-<!--        <img src="http://timetrackerassets.s3.amazonaws.com/timetrackerassets/image-jeremy.png"/>-->
-        <img src="https://timetrackerassets.s3.us-east-2.amazonaws.com/image-jeremy.png"/>
+        <img :src="`https://timetrackerassets.s3.us-east-2.amazonaws.com/${name}`"/>
         <p>Report for
           <br>
           <span>
