@@ -4,21 +4,17 @@
 ```
 npm install
 ```
+### To run the project locally
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Run 
+``` docker build -t vue-prod -f Dockerfile . ``` 
+to build the docker image from the dockerfile.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Run 
+``` docker run -itd -p 8080:80 vue-prod ``` 
+to create the container from the vue-prod docker image. You can access the app on port http://localhost:8080/ on your browser.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### What you will learn
+- How to deploy application using docker
+- Hosting of containers on heroku
+- Hosting of static assets ( images ) on amazon s3.
