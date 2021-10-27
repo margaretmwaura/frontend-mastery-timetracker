@@ -45,6 +45,8 @@
 
     &_hours{
       //line-height: 10% !important;
+      position:relative;
+
       p{
         font-size: 45px;
         color: white;
@@ -58,6 +60,19 @@
         font-family: rubik, monospace;
         font-weight: 700 !important;
       }
+
+      @media only screen and (max-device-width: 480px) {
+        display: flex;
+        justify-content: space-between;
+
+        h1{
+          //bottom: 0;
+          //right:0;
+          //position:absolute;
+          margin-top: 2em;
+        }
+      }
+
     }
   }
 }

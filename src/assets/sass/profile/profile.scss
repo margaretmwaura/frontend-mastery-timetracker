@@ -3,6 +3,10 @@
   background: $dark-blue;
   border-radius: 15px;
 
+  @media only screen and (max-device-width: 480px) {
+    margin-bottom: 30px;
+  }
+
   &_details {
     background: $background-color !important;
     border-radius: 15px !important;
@@ -48,6 +52,11 @@
 
     &_third {
       color: $desaturated-blue;
+    }
+
+    @media only screen and (max-device-width: 480px) {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

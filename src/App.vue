@@ -8,7 +8,7 @@
           <div class="cell small-12 medium-1 large-1">
           </div>
           <div class="cell small-12 medium-10 large-10">
-            <div class="grid-x grid-margin-x">
+            <div class="grid-x grid-margin-x grid-margin-y">
               <div class="cell small-12 medium-3 large-3">
                 <profile></profile>
               </div>
