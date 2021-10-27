@@ -28,7 +28,7 @@ EXPOSE 80
 # run nginx
 CMD ["nginx", "-g", "daemon off;"]
 
-# docker build -t vue-prod -f Dockerfile-build-app .
+# docker build -t vue-prod -f Dockerfile .
 # docker run -itd -p 8080:80 vue-prod
 
 
